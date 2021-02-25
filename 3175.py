@@ -1,12 +1,22 @@
-N, K = (K for K in input() if K != ' ')
-a = []
+N, K = input().split()
+# print(K)
+# print(N)
+aa = []
 
-for i in range(1, N):
-    a.append('I')
+N = int(N)
+K = int(K)
 
-for m in range(1, K):
-    a1, a2 = (a2 for a2 in input() if a2 != ' ')
-    for j in range(a1, a2):
-        a[j] = '.'
+for i in range(1, N+1):
+    aa.append('I')
 
-print(a)
+for m in range(1, K+1):
+    a1, a2 = input().split()
+    a1 = int(a1)
+    a2 = int(a2)
+    for j in range(a1, a2+1):
+        aa.pop(j-1)
+        #print(aa)
+        aa.insert(j-1, '.')
+        #print(aa)
+        #print(' ')
+print(''.join(aa))
